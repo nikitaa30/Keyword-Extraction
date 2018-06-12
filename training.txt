@@ -1,0 +1,417 @@
+In computer software, a general-purpose programming language is a programming language designed to be used for writing software in the widest variety of application domains (a general-purpose language). A general-purpose language has this status because it does not include language constructs designed to be used within a specific application domain (e.g., a page description language contains constructs intended to make it easier to write programs that control the layout of text and graphics on a page).
+    Ada
+    ALGOL
+    Assembly language
+    BASIC
+    Visual Basic
+    Boo
+    C
+    C++
+    C#
+    Clojure
+    COBOL
+    Crystal
+    D
+    Dart
+    Elixir
+    Erlang
+    F#
+    Fortran
+    Go
+    Harbour
+    Haskell
+    Idris
+    Java
+    JavaScript
+    Julia
+    Lisp
+    Lua
+    Modula-2
+    NPL
+    Oberon
+    Objective-C
+    Pascal
+    Perl
+    Pike
+    PL/I
+    Python
+    Ring
+    RPG
+    Ruby
+    Rust
+    Scala
+    Simula
+    Swift
+    Tcl
+A programming language is a formal language that specifies a set of instructions that can be used to produce various kinds of output. Programming languages generally consist of instructions for a computer. Programming languages can be used to create programs that implement specific algorithms.
+
+There are programmable machines that use a limited set of specific instructions, rather than the general programming languages of modern computers. Early ones preceded the invention of the digital computer, the first probably being the automatic flute player described in the 9th century by the brothers Musa in Baghdad, during the Islamic Golden Age.[1] From the early 1800s, programs were used to direct the behavior of machines such as Jacquard looms, music boxes and player pianos.[2] However, their programs (such as a player piano's scrolls) could not produce different behavior in response to some input or condition.
+
+Thousands of different programming languages have been created, mainly in the computer field, and many more still are being created every year. Many programming languages require computation to be specified in an imperative form (i.e., as a sequence of operations to perform) while other languages use other forms of program specification such as the declarative form (i.e. the desired result is specified, not how to achieve it).
+
+The description of a programming language is usually split into the two components of syntax (form) and semantics (meaning). Some languages are defined by a specification document (for example, the C programming language is specified by an ISO Standard) while other languages (such as Perl) have a dominant implementation that is treated as a reference. Some languages have both, with the basic language defined by a standard and extensions taken from the dominant implementation being common.
+A programming language is a notation for writing programs, which are specifications of a computation or algorithm.[3] Some, but not all, authors restrict the term "programming language" to those languages that can express all possible algorithms.[3][4] Traits often considered important for what constitutes a programming language include:
+
+Function and target
+    A computer programming language is a language used to write computer programs, which involves a computer performing some kind of computation[5] or algorithm and possibly control external devices such as printers, disk drives, robots,[6] and so on. For example, PostScript programs are frequently created by another program to control a computer printer or display. More generally, a programming language may describe computation on some, possibly abstract, machine. It is generally accepted that a complete specification for a programming language includes a description, possibly idealized, of a machine or processor for that language.[7] In most practical contexts, a programming language involves a computer; consequently, programming languages are usually defined and studied this way.[8] Programming languages differ from natural languages in that natural languages are only used for interaction between people, while programming languages also allow humans to communicate instructions to machines.
+
+A selection of textbooks that teach programming, in languages both popular and obscure. These are only a few of the thousands of programming languages and dialects that have been designed in history.
+
+The 1980s were years of relative consolidation. C++ combined object-oriented and systems programming. The United States government standardized Ada, a systems programming language derived from Pascal and intended for use by defense contractors. In Japan and elsewhere, vast sums were spent investigating so-called "fifth generation" languages that incorporated logic programming constructs.[41] The functional languages community moved to standardize ML and Lisp. Rather than inventing new paradigms, all of these movements elaborated upon the ideas invented in the previous decades.
+
+One important trend in language design for programming large-scale systems during the 1980s was an increased focus on the use of modules or large-scale organizational units of code. Modula-2, Ada, and ML all developed notable module systems in the 1980s, which were often wedded to generic programming constructs.[42]
+
+The rapid growth of the Internet in the mid-1990s created opportunities for new languages. Perl, originally a Unix scripting tool first released in 1987, became common in dynamic websites. Java came to be used for server-side programming, and bytecode virtual machines became popular again in commercial settings with their promise of "Write once, run anywhere" (UCSD Pascal had been popular for a time in the early 1980s). These developments were not fundamentally novel, rather they were refinements of many existing languages and paradigms (although their syntax was often based on the C family of programming languages).
+
+Programming language evolution continues, in both industry and research. Current directions include security and reliability verification, new kinds of modularity (mixins, delegates, aspects), and database integration such as Microsoft's LINQ.
+
+Fourth-generation programming languages (4GL) are computer programming languages which aim to provide a higher level of abstraction of the internal computer hardware details than 3GLs. Fifth generation programming languages (5GL) are programming languages based on solving problems using constraints given to the program, rather than using an algorithm written by a programmer.
+Elements
+
+All programming languages have some primitive building blocks for the description of data and the processes or transformations applied to them (like the addition of two numbers or the selection of an item from a collection). These primitives are defined by syntactic and semantic rules which describe their structure and meaning respectively.
+Syntax
+Main article: Syntax (programming languages)
+Parse tree of Python code with inset tokenization
+Syntax highlighting is often used to aid programmers in recognizing elements of source code. The language above is Python.
+
+A programming language's surface form is known as its syntax. Most programming languages are purely textual; they use sequences of text including words, numbers, and punctuation, much like written natural languages. On the other hand, there are some programming languages which are more graphical in nature, using visual relationships between symbols to specify a program.
+
+The syntax of a language describes the possible combinations of symbols that form a syntactically correct program. The meaning given to a combination of symbols is handled by semantics (either formal or hard-coded in a reference implementation). Since most languages are textual, this article discusses textual syntax.
+
+Programming language syntax is usually defined using a combination of regular expressions (for lexical structure) and Backus–Naur form (for grammatical structure). Below is a simple grammar, based on Lisp:
+
+expression ::= atom | list
+atom       ::= number | symbol
+number     ::= [+-]?['0'-'9']+
+symbol     ::= ['A'-'Z''a'-'z'].*
+list       ::= '(' expression* ')'
+
+This grammar specifies the following:
+
+    an expression is either an atom or a list;
+    an atom is either a number or a symbol;
+    a number is an unbroken sequence of one or more decimal digits, optionally preceded by a plus or minus sign;
+    a symbol is a letter followed by zero or more of any characters (excluding whitespace); and
+    a list is a matched pair of parentheses, with zero or more expressions inside it.
+
+The following are examples of well-formed token sequences in this grammar: 12345, () and (a b c232 (1)).
+
+Not all syntactically correct programs are semantically correct. Many syntactically correct programs are nonetheless ill-formed, per the language's rules; and may (depending on the language specification and the soundness of the implementation) result in an error on translation or execution. In some cases, such programs may exhibit undefined behavior. Even when a program is well-defined within a language, it may still have a meaning that is not intended by the person who wrote it.
+
+Using natural language as an example, it may not be possible to assign a meaning to a grammatically correct sentence or the sentence may be false:
+
+    "Colorless green ideas sleep furiously." is grammatically well-formed but has no generally accepted meaning.
+    "John is a married bachelor." is grammatically well-formed but expresses a meaning that cannot be true.
+
+The following C language fragment is syntactically correct, but performs operations that are not semantically defined (the operation *p >> 4 has no meaning for a value having a complex type and p->im is not defined because the value of p is the null pointer):
+
+complex *p = NULL;
+complex abs_p = sqrt(*p >> 4 + p->im);
+
+If the type declaration on the first line were omitted, the program would trigger an error on compilation, as the variable "p" would not be defined. But the program would still be syntactically correct since type declarations provide only semantic information.
+
+The grammar needed to specify a programming language can be classified by its position in the Chomsky hierarchy. The syntax of most programming languages can be specified using a Type-2 grammar, i.e., they are context-free grammars.[43] Some languages, including Perl and Lisp, contain constructs that allow execution during the parsing phase. Languages that have constructs that allow the programmer to alter the behavior of the parser make syntax analysis an undecidable problem, and generally blur the distinction between parsing and execution.[44] In contrast to Lisp's macro system and Perl's BEGIN blocks, which may contain general computations, C macros are merely string replacements and do not require code execution.[45]
+Semantics
+
+The term semantics refers to the meaning of languages, as opposed to their form (syntax).
+Static semantics
+
+The static semantics defines restrictions on the structure of valid texts that are hard or impossible to express in standard syntactic formalisms.[3] For compiled languages, static semantics essentially include those semantic rules that can be checked at compile time. Examples include checking that every identifier is declared before it is used (in languages that require such declarations) or that the labels on the arms of a case statement are distinct.[46] Many important restrictions of this type, like checking that identifiers are used in the appropriate context (e.g. not adding an integer to a function name), or that subroutine calls have the appropriate number and type of arguments, can be enforced by defining them as rules in a logic called a type system. Other forms of static analyses like data flow analysis may also be part of static semantics. Newer programming languages like Java and C# have definite assignment analysis, a form of data flow analysis, as part of their static semantics.
+Dynamic semantics
+Main article: Semantics of programming languages
+
+Once data has been specified, the machine must be instructed to perform operations on the data. For example, the semantics may define the strategy by which expressions are evaluated to values, or the manner in which control structures conditionally execute statements. The dynamic semantics (also known as execution semantics) of a language defines how and when the various constructs of a language should produce a program behavior. There are many ways of defining execution semantics. Natural language is often used to specify the execution semantics of languages commonly used in practice. A significant amount of academic research went into formal semantics of programming languages, which allow execution semantics to be specified in a formal manner. Results from this field of research have seen limited application to programming language design and implementation outside academia.
+Type system
+Main articles: Data type, Type system, and Type safety
+
+A type system defines how a programming language classifies values and expressions into types, how it can manipulate those types and how they interact. The goal of a type system is to verify and usually enforce a certain level of correctness in programs written in that language by detecting certain incorrect operations. Any decidable type system involves a trade-off: while it rejects many incorrect programs, it can also prohibit some correct, albeit unusual programs. In order to bypass this downside, a number of languages have type loopholes, usually unchecked casts that may be used by the programmer to explicitly allow a normally disallowed operation between different types. In most typed languages, the type system is used only to type check programs, but a number of languages, usually functional ones, infer types, relieving the programmer from the need to write type annotations. The formal design and study of type systems is known as type theory.
+Typed versus untyped languages
+
+A language is typed if the specification of every operation defines types of data to which the operation is applicable, with the implication that it is not applicable to other types.[47] For example, the data represented by "this text between the quotes" is a string, and in many programming languages dividing a number by a string has no meaning and will be rejected by the compilers. The invalid operation may be detected when the program is compiled ("static" type checking) and will be rejected by the compiler with a compilation error message, or it may be detected when the program is run ("dynamic" type checking), resulting in a run-time exception. Many languages allow a function called an exception handler to be written to handle this exception and, for example, always return "-1" as the result.
+
+A special case of typed languages are the single-type languages. These are often scripting or markup languages, such as REXX or SGML, and have only one data type[dubious – discuss]-—most commonly character strings which are used for both symbolic and numeric data.
+
+In contrast, an untyped language, such as most assembly languages, allows any operation to be performed on any data, which are generally considered to be sequences of bits of various lengths.[47] High-level languages which are untyped include BCPL, Tcl, and some varieties of Forth.
+
+In practice, while few languages are considered typed from the point of view of type theory (verifying or rejecting all operations), most modern languages offer a degree of typing.[47] Many production languages provide means to bypass or subvert the type system, trading type-safety for finer control over the program's execution (see casting).
+Static versus dynamic typing
+
+In static typing, all expressions have their types determined prior to when the program is executed, typically at compile-time. For example, 1 and (2+2) are integer expressions; they cannot be passed to a function that expects a string, or stored in a variable that is defined to hold dates.[47]
+
+Statically typed languages can be either manifestly typed or type-inferred. In the first case, the programmer must explicitly write types at certain textual positions (for example, at variable declarations). In the second case, the compiler infers the types of expressions and declarations based on context. Most mainstream statically typed languages, such as C++, C# and Java, are manifestly typed. Complete type inference has traditionally been associated with less mainstream languages, such as Haskell and ML. However, many manifestly typed languages support partial type inference; for example, C++, Java and C# all infer types in certain limited cases.[48] Additionally, some programming languages allow for some types to be automatically converted to other types; for example, an int can be used where the program expects a float.
+
+Dynamic typing, also called latent typing, determines the type-safety of operations at run time; in other words, types are associated with run-time values rather than textual expressions.[47] As with type-inferred languages, dynamically typed languages do not require the programmer to write explicit type annotations on expressions. Among other things, this may permit a single variable to refer to values of different types at different points in the program execution. However, type errors cannot be automatically detected until a piece of code is actually executed, potentially making debugging more difficult. Lisp, Smalltalk, Perl, Python, JavaScript, and Ruby are all examples of dynamically typed languages.
+Weak and strong typing
+
+Weak typing allows a value of one type to be treated as another, for example treating a string as a number.[47] This can occasionally be useful, but it can also allow some kinds of program faults to go undetected at compile time and even at run time.
+
+Strong typing prevents the above. An attempt to perform an operation on the wrong type of value raises an error.[47] Strongly typed languages are often termed type-safe or safe.
+
+An alternative definition for "weakly typed" refers to languages, such as Perl and JavaScript, which permit a large number of implicit type conversions. In JavaScript, for example, the expression 2 * x implicitly converts x to a number, and this conversion succeeds even if x is null, undefined, an Array, or a string of letters. Such implicit conversions are often useful, but they can mask programming errors. Strong and static are now generally considered orthogonal concepts, but usage in the literature differs. Some use the term strongly typed to mean strongly, statically typed, or, even more confusingly, to mean simply statically typed. Thus C has been called both strongly typed and weakly, statically typed.[49][50]
+
+It may seem odd to some professional programmers that C could be "weakly, statically typed". However, notice that the use of the generic pointer, the void* pointer, does allow for casting of pointers to other pointers without needing to do an explicit cast. This is extremely similar to somehow casting an array of bytes to any kind of datatype in C without using an explicit cast, such as (int) or (char).
+Standard library and run-time system
+Main article: Standard library
+
+Most programming languages have an associated core library (sometimes known as the 'standard library', especially if it is included as part of the published language standard), which is conventionally made available by all implementations of the language. Core libraries typically include definitions for commonly used algorithms, data structures, and mechanisms for input and output.
+
+The line between a language and its core library differs from language to language. In some cases, the language designers may treat the library as a separate entity from the language. However, a language's core library is often treated as part of the language by its users, and some language specifications even require that this library be made available in all implementations. Indeed, some languages are designed so that the meanings of certain syntactic constructs cannot even be described without referring to the core library. For example, in Java, a string literal is defined as an instance of the java.lang.String class; similarly, in Smalltalk, an anonymous function expression (a "block") constructs an instance of the library's BlockContext class. Conversely, Scheme contains multiple coherent subsets that suffice to construct the rest of the language as library macros, and so the language designers do not even bother to say which portions of the language must be implemented as language constructs, and which must be implemented as parts of a library.
+Design and implementation
+
+Programming languages share properties with natural languages related to their purpose as vehicles for communication, having a syntactic form separate from its semantics, and showing language families of related languages branching one from another.[51][52] But as artificial constructs, they also differ in fundamental ways from languages that have evolved through usage. A significant difference is that a programming language can be fully described and studied in its entirety, since it has a precise and finite definition.[53] By contrast, natural languages have changing meanings given by their users in different communities. While constructed languages are also artificial languages designed from the ground up with a specific purpose, they lack the precise and complete semantic definition that a programming language has.
+
+Many programming languages have been designed from scratch, altered to meet new needs, and combined with other languages. Many have eventually fallen into disuse. Although there have been attempts to design one "universal" programming language that serves all purposes, all of them have failed to be generally accepted as filling this role.[54] The need for diverse programming languages arises from the diversity of contexts in which languages are used:
+
+    Programs range from tiny scripts written by individual hobbyists to huge systems written by hundreds of programmers.
+    Programmers range in expertise from novices who need simplicity above all else, to experts who may be comfortable with considerable complexity.
+    Programs must balance speed, size, and simplicity on systems ranging from microcontrollers to supercomputers.
+    Programs may be written once and not change for generations, or they may undergo continual modification.
+    Programmers may simply differ in their tastes: they may be accustomed to discussing problems and expressing them in a particular language.
+
+One common trend in the development of programming languages has been to add more ability to solve problems using a higher level of abstraction. The earliest programming languages were tied very closely to the underlying hardware of the computer. As new programming languages have developed, features have been added that let programmers express ideas that are more remote from simple translation into underlying hardware instructions. Because programmers are less tied to the complexity of the computer, their programs can do more computing with less effort from the programmer. This lets them write more functionality per time unit.[55]
+
+Natural language programming has been proposed as a way to eliminate the need for a specialized language for programming. However, this goal remains distant and its benefits are open to debate. Edsger W. Dijkstra took the position that the use of a formal language is essential to prevent the introduction of meaningless constructs, and dismissed natural language programming as "foolish".[56] Alan Perlis was similarly dismissive of the idea.[57] Hybrid approaches have been taken in Structured English and SQL.
+
+A language's designers and users must construct a number of artifacts that govern and enable the practice of programming. The most important of these artifacts are the language specification and implementation.
+Specification
+Main article: Programming language specification
+
+The specification of a programming language is an artifact that the language users and the implementors can use to agree upon whether a piece of source code is a valid program in that language, and if so what its behavior shall be.
+
+A programming language specification can take several forms, including the following:
+
+    An explicit definition of the syntax, static semantics, and execution semantics of the language. While syntax is commonly specified using a formal grammar, semantic definitions may be written in natural language (e.g., as in the C language), or a formal semantics (e.g., as in Standard ML[58] and Scheme[59] specifications).
+    A description of the behavior of a translator for the language (e.g., the C++ and Fortran specifications). The syntax and semantics of the language have to be inferred from this description, which may be written in natural or a formal language.
+    A reference or model implementation, sometimes written in the language being specified (e.g., Prolog or ANSI REXX[60]). The syntax and semantics of the language are explicit in the behavior of the reference implementation.
+
+Implementation
+Main article: Programming language implementation
+
+An implementation of a programming language provides a way to write programs in that language and execute them on one or more configurations of hardware and software. There are, broadly, two approaches to programming language implementation: compilation and interpretation. It is generally possible to implement a language using either technique.
+
+The output of a compiler may be executed by hardware or a program called an interpreter. In some implementations that make use of the interpreter approach there is no distinct boundary between compiling and interpreting. For instance, some implementations of BASIC compile and then execute the source a line at a time.
+
+Programs that are executed directly on the hardware usually run several orders of magnitude faster than those that are interpreted in software.[citation needed]
+
+One technique for improving the performance of interpreted programs is just-in-time compilation. Here the virtual machine, just before execution, translates the blocks of bytecode which are going to be used to machine code, for direct execution on the hardware.
+Proprietary languages
+	
+This section does not cite any sources. Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (July 2015) (Learn how and when to remove this template message)
+
+Although most of the most commonly used programming languages have fully open specifications and implementations, many programming languages exist only as proprietary programming languages with the implementation available only from a single vendor, which may claim that such a proprietary language is their intellectual property. Proprietary programming languages are commonly domain specific languages or internal scripting languages for a single product; some proprietary languages are used only internally within a vendor, while others are available to external users.
+
+Some programming languages exist on the border between proprietary and open; for example, Oracle Corporation asserts proprietary rights to some aspects of the Java programming language,[61] and Microsoft's C# programming language, which has open implementations of most parts of the system, also has Common Language Runtime (CLR) as a closed environment.[62]
+
+Many proprietary languages are widely used, in spite of their proprietary nature; examples include MATLAB, VBScript, and Wolfram Language. Some languages may make the transition from closed to open; for example, Erlang was originally an Ericsson's internal programming language.[63]
+Usage
+
+Thousands of different programming languages have been created, mainly in the computing field.[64] Software is commonly built with 5 programming languages or more.[65]
+
+Programming languages differ from most other forms of human expression in that they require a greater degree of precision and completeness. When using a natural language to communicate with other people, human authors and speakers can be ambiguous and make small errors, and still expect their intent to be understood. However, figuratively speaking, computers "do exactly what they are told to do", and cannot "understand" what code the programmer intended to write. The combination of the language definition, a program, and the program's inputs must fully specify the external behavior that occurs when the program is executed, within the domain of control of that program. On the other hand, ideas about an algorithm can be communicated to humans without the precision required for execution by using pseudocode, which interleaves natural language with code written in a programming language.
+
+A programming language provides a structured mechanism for defining pieces of data, and the operations or transformations that may be carried out automatically on that data. A programmer uses the abstractions present in the language to represent the concepts involved in a computation. These concepts are represented as a collection of the simplest elements available (called primitives).[66] Programming is the process by which programmers combine these primitives to compose new programs, or adapt existing ones to new uses or a changing environment.
+
+Programs for a computer might be executed in a batch process without human interaction, or a user might type commands in an interactive session of an interpreter. In this case the "commands" are simply programs, whose execution is chained together. When a language can run its commands through an interpreter (such as a Unix shell or other command-line interface), without compiling, it is called a scripting language.[67]
+Measuring language usage
+Main article: Measuring programming language popularity
+
+It is difficult to determine which programming languages are most widely used, and what usage means varies by context. One language may occupy the greater number of programmer hours, a different one have more lines of code, and a third may consume the most CPU time. Some languages are very popular for particular kinds of applications. For example, COBOL is still strong in the corporate data center, often on large mainframes;[68][69] Fortran in scientific and engineering applications; Ada in aerospace, transportation, military, real-time and embedded applications; and C in embedded applications and operating systems. Other languages are regularly used to write many different kinds of applications.
+
+Various methods of measuring language popularity, each subject to a different bias over what is measured, have been proposed:
+
+    counting the number of job advertisements that mention the language[70]
+    the number of books sold that teach or describe the language[71]
+    estimates of the number of existing lines of code written in the language – which may underestimate languages not often found in public searches[72]
+    counts of language references (i.e., to the name of the language) found using a web search engine.
+
+Combining and averaging information from various internet sites, langpop.com claims that in 2013 the ten most popular programming languages are (in descending order by overall popularity): C, Java, PHP, JavaScript, C++, Python, Shell, Ruby, Objective-C and C#.[73]
+Dialects, flavors and implementations
+
+A dialect of a programming language or a data exchange language is a (relatively small) variation or extension of the language that does not change its intrinsic nature. With languages such as Scheme and Forth, standards may be considered insufficient, inadequate or illegitimate by implementors, so often they will deviate from the standard, making a new dialect. In other cases, a dialect is created for use in a domain-specific language, often a subset. In the Lisp world, most languages that use basic S-expression syntax and Lisp-like semantics are considered Lisp dialects, although they vary wildly, as do, say, Racket and Clojure. As it is common for one language to have several dialects, it can become quite difficult for an inexperienced programmer to find the right documentation. The BASIC programming language has many dialects.
+
+The explosion of Forth dialects led to the saying "If you've seen one Forth... you've seen one Forth."
+
+Java Java programming language logo.svg
+Paradigm 	Multi-paradigm: object-oriented (class-based), structured, imperative, generic, reflective, concurrent
+Designed by 	James Gosling
+Developer 	Sun Microsystems (now owned by Oracle Corporation)
+First appeared 	May 23, 1995; 23 years ago[1]
+Typing discipline 	Static, strong, safe, nominative, manifest
+License 	GNU General Public License, Java Community Process
+Filename extensions 	.java, .class, .jar
+Website 	oracle.com/java/
+Major implementations
+Compilers: OpenJDK (javac, sjavac), GNU Compiler for Java (GCJ), Eclipse Compiler for Java (ECJ)
+Virtual machines: OpenJDK JRE, Oracle JRockit, Azul Zing, IBM J9, Excelsior JET, Gluon VM, Microsoft JVM, Apache Harmony
+JIT compilers: HotSpot, GraalVM, Azul Falcon (LLVM)
+Dialects
+Generic Java, Pizza
+Influenced by
+Ada 83, C++,[2] C#,[3] Eiffel,[4] Generic Java, Mesa,[5] Modula-3,[6] Oberon,[7] Objective-C,[8] UCSD Pascal,[9][10] Object Pascal[11]
+Influenced
+Ada 2005, BeanShell, C#, Chapel,[12] Clojure, ECMAScript, Fantom, Gambas,[13] Groovy, Hack,[14] Haxe, J#, JavaScript, Kotlin, PHP, Python, Scala, Seed7, Vala
+
+    Java Programming at Wikibooks 
+
+Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented,[15] and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[16] meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.[17] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture. As of 2016, Java is one of the most popular programming languages in use,[18][19][20][21] particularly for client-server web applications, with a reported 9 million developers.[22] Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform. The language derives much of its syntax from C and C++, but it has fewer low-level facilities than either of them.
+
+The original and reference implementation Java compilers, virtual machines, and class libraries were originally released by Sun under proprietary licenses. As of May 2007, in compliance with the specifications of the Java Community Process, Sun relicensed most of its Java technologies under the GNU General Public License. Others have also developed alternative implementations of these Sun technologies, such as the GNU Compiler for Java (bytecode compiler), GNU Classpath (standard libraries), and IcedTea-Web (browser plugin for applets).
+Execution System
+
+Java Basics
+Topics in this section include:
+• What makes Java programs portable, secure, and robust
+Portability
+Security
+The Java language is secure in that it is very difficult to write incorrect code or
+viruses that can corrupt/steal your data, or harm hardware such as hard disks.
+Robustness
+The Java language is robust.
+Java JVM and Bytecode
+Main articles: Java (software platform) and Java virtual machine
+
+One design goal of Java is portability, which means that programs written for the Java platform must run similarly on any combination of hardware and operating system with adequate runtime support. This is achieved by compiling the Java language code to an intermediate representation called Java bytecode, instead of directly to architecture-specific machine code. Java bytecode instructions are analogous to machine code, but they are intended to be executed by a virtual machine (VM) written specifically for the host hardware. End users commonly use a Java Runtime Environment (JRE) installed on their own machine for standalone Java applications, or in a web browser for Java applets.
+
+Standard libraries provide a generic way to access host-specific features such as graphics, threading, and networking.
+
+The use of universal bytecode makes porting simple. However, the overhead of interpreting bytecode into machine instructions made interpreted programs almost always run more slowly than native executables. Just-in-time (JIT) compilers that compile bytecodes to machine code during runtime were introduced from an early stage. Java itself is platform-independent and is adapted to the particular platform it is to run on by a Java virtual machine for it, which translates the Java bytecode into the platform's machine language.[48]
+
+
+Performance
+Main article: Java performance
+
+Programs written in Java have a reputation for being slower and requiring more memory than those written in C++.[49][50] However, Java programs' execution speed improved significantly with the introduction of just-in-time compilation in 1997/1998 for Java 1.1,[51] the addition of language features supporting better code analysis (such as inner classes, the StringBuilder class, optional assertions, etc.), and optimizations in the Java virtual machine, such as HotSpot becoming the default for Sun's JVM in 2000. With Java 1.5, the performance was improved with the addition of the java.util.concurrent package, including lock free implementations of the ConcurrentMaps and other multi-core collections, and it was improved further with Java 1.6.
+Non-JVM
+
+Some platforms offer direct hardware support for Java; there are microcontrollers that can run Java bytecode in hardware instead of a software Java virtual machine[52], and some ARM based processors could have hardware support for executing Java bytecode through their Jazelle option, though support has mostly been dropped in current implementations of ARM.
+
+
+Automatic memory management
+
+Java uses an automatic garbage collector to manage memory in the object lifecycle. The programmer determines when objects are created, and the Java runtime is responsible for recovering the memory once objects are no longer in use. Once no references to an object remain, the unreachable memory becomes eligible to be freed automatically by the garbage collector. Something similar to a memory leak may still occur if a programmer's code holds a reference to an object that is no longer needed, typically when objects that are no longer needed are stored in containers that are still in use. If methods for a nonexistent object are called, a "null pointer exception" is thrown.[53][54]
+
+One of the ideas behind Java's automatic memory management model is that programmers can be spared the burden of having to perform manual memory management. In some languages, memory for the creation of objects is implicitly allocated on the stack or explicitly allocated and deallocated from the heap. In the latter case, the responsibility of managing memory resides with the programmer. If the program does not deallocate an object, a memory leak occurs. If the program attempts to access or deallocate memory that has already been deallocated, the result is undefined and difficult to predict, and the program is likely to become unstable or crash. This can be partially remedied by the use of smart pointers, but these add overhead and complexity. Note that garbage collection does not prevent "logical" memory leaks, i.e., those where the memory is still referenced but never used.
+
+Garbage collection may happen at any time. Ideally, it will occur when a program is idle. It is guaranteed to be triggered if there is insufficient free memory on the heap to allocate a new object; this can cause a program to stall momentarily. Explicit memory management is not possible in Java.
+
+Java does not support C/C++ style pointer arithmetic, where object addresses and unsigned integers (usually long integers) can be used interchangeably. This allows the garbage collector to relocate referenced objects and ensures type safety and security.
+
+As in C++ and some other object-oriented languages, variables of Java's primitive data types are either stored directly in fields (for objects) or on the stack (for methods) rather than on the heap, as is commonly true for non-primitive data types (but see escape analysis). This was a conscious decision by Java's designers for performance reasons.
+
+Java contains multiple types of garbage collectors. By default, HotSpot uses the parallel scavenge garbage collector.[55] However, there are also several other garbage collectors that can be used to manage the heap. For 90% of applications in Java, the Concurrent Mark-Sweep (CMS) garbage collector is sufficient.[56] Oracle aims to replace CMS with the Garbage-First collector (G1).[57]
+Syntax
+Main article: Java syntax
+Dependency graph of the Java Core classes (created with jdeps and Gephi). The most frequently used classes Object and String appear in the centre of the diagram.
+
+The syntax of Java is largely influenced by C++. Unlike C++, which combines the syntax for structured, generic, and object-oriented programming, Java was built almost exclusively as an object-oriented language.[17] All code is written inside classes, and every data item is an object, with the exception of the primitive data types, (i.e. integers, floating-point numbers, boolean values, and characters), which are not objects for performance reasons. Java reuses some popular aspects of C++ (such as the printf method).
+
+Unlike C++, Java does not support operator overloading[58] or multiple inheritance for classes, though multiple inheritance is supported for interfaces.[59]
+
+Java uses comments similar to those of C++. There are three different styles of comments: a single line style marked with two slashes (//), a multiple line style opened with /* and closed with */, and the Javadoc commenting style opened with /** and closed with */. The Javadoc style of commenting allows the user to run the Javadoc executable to create documentation for the program and can be read by some integrated development environments (IDEs) such as Eclipse to allow developers to access documentation within the IDE.
+
+
+"Hello world" example
+
+The traditional "Hello, world!" program can be written in Java as:[60]
+
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Prints the string to the console.
+    }
+}
+
+Source files must be named after the public class they contain, appending the suffix .java, for example, HelloWorldApp.java. It must first be compiled into bytecode, using a Java compiler, producing a file named HelloWorldApp.class. Only then can it be executed, or "launched". The Java source file may only contain one public class, but it can contain multiple classes with other than public access modifier and any number of public inner classes. When the source file contains multiple classes, make one class "public" and name the source file with that public class name.
+
+A class that is not declared public may be stored in any .java file. The compiler will generate a class file for each class defined in the source file. The name of the class file is the name of the class, with .class appended. For class file generation, anonymous classes are treated as if their name were the concatenation of the name of their enclosing class, a $, and an integer.
+
+The keyword public denotes that a method can be called from code in other classes, or that a class may be used by classes outside the class hierarchy. The class hierarchy is related to the name of the directory in which the .java file is located. This is called an access level modifier. Other access level modifiers include the keywords private and protected.
+
+The keyword static in front of a method indicates a static method, which is associated only with the class and not with any specific instance of that class. Only static methods can be invoked without a reference to an object. Static methods cannot access any class members that are not also static. Methods that are not designated static are instance methods and require a specific instance of a class to operate.
+
+The keyword void indicates that the main method does not return any value to the caller. If a Java program is to exit with an error code, it must call System.exit() explicitly.
+
+The method name "main" is not a keyword in the Java language. It is simply the name of the method the Java launcher calls to pass control to the program. Java classes that run in managed environments such as applets and Enterprise JavaBeans do not use or need a main() method. A Java program may contain multiple classes that have main methods, which means that the VM needs to be explicitly told which class to launch from.
+
+The main method must accept an array of String objects. By convention, it is referenced as args although any other legal identifier name can be used. Since Java 5, the main method can also use variable arguments, in the form of public static void main(String... args), allowing the main method to be invoked with an arbitrary number of String arguments. The effect of this alternate declaration is semantically identical (to the args parameter which is still an array of String objects), but it allows an alternative syntax for creating and passing the array.
+
+The Java launcher launches Java by loading a given class (specified on the command line or as an attribute in a JAR) and starting its public static void main(String[]) method. Stand-alone programs must declare this method explicitly. The String[] args parameter is an array of String objects containing any arguments passed to the class. The parameters to main are often passed by means of a command line.
+
+Printing is part of a Java standard library: The System class defines a public static field called out. The out object is an instance of the PrintStream class and provides many methods for printing data to standard out, including println(String) which also appends a new line to the passed string.
+
+The string "Hello World!" is automatically converted to a String object by the compiler.
+Example with Methods
+
+// This is an example of a single line comment using two slashes
+
+/* This is an example of a multiple line comment using the slash and asterisk.
+ This type of comment can be used to hold a lot of information or deactivate
+ code, but it is very important to remember to close the comment. */
+
+package fibsandlies;
+import java.util.HashMap;
+
+/**
+ * This is an example of a Javadoc comment; Javadoc can compile documentation
+ * from this text. Javadoc comments must immediately precede the class, method, or field being documented.
+ */
+public class FibCalculator extends Fibonacci implements Calculator {
+    private static Map<Integer, Integer> memoized = new HashMap<Integer, Integer>();
+
+    /*
+     * The main method written as follows is used by the JVM as a starting point for the program.
+     */
+    public static void main(String[] args) {
+        memoized.put(1, 1);
+        memoized.put(2, 1);
+        System.out.println(fibonacci(12)); //Get the 12th Fibonacci number and print to console
+    }
+
+    /**
+     * An example of a method written in Java, wrapped in a class.
+     * Given a non-negative number FIBINDEX, returns
+     * the Nth Fibonacci number, where N equals FIBINDEX.
+     * @param fibIndex The index of the Fibonacci number
+     * @return The Fibonacci number
+     */
+    public static int fibonacci(int fibIndex) {
+        if (memoized.containsKey(fibIndex)) {
+            return memoized.get(fibIndex);
+        } else {
+            int answer = fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2);
+            memoized.put(fibIndex, answer);
+            return answer;
+        }
+    }
+}
+
+Special classes
+Applet
+Main article: Java applet
+
+Java applets were programs that were embedded in other applications, typically in a Web page displayed in a web browser. The Java applet API is now deprecated since Java 9 in 2017.
+Servlet
+Main article: Java servlet
+
+Java servlet technology provides Web developers with a simple, consistent mechanism for extending the functionality of a Web server and for accessing existing business systems. Servlets are server-side Java EE components that generate responses (typically HTML pages) to requests (typically HTTP requests) from clients.
+
+The Java servlet API has to some extent been superseded by two standard Java technologies for web services:
+
+    the Java API for RESTful Web Services (JAX-RS 2.0) useful for AJAX, JSON and REST services, and
+    the Java API for XML Web Services (JAX-WS) useful for SOAP Web Services.
+
+JavaServer Pages
+Main article: JavaServer Pages
+
+JavaServer Pages (JSP) are server-side Java EE components that generate responses, typically HTML pages, to HTTP requests from clients. JSPs embed Java code in an HTML page by using the special delimiters <% and %>. A JSP is compiled to a Java servlet, a Java application in its own right, the first time it is accessed. After that, the generated servlet creates the response.
+Swing application
+Main article: Swing (Java)
+
+Swing is a graphical user interface library for the Java SE platform. It is possible to specify a different look and feel through the pluggable look and feel system of Swing. Clones of Windows, GTK+, and Motif are supplied by Sun. Apple also provides an Aqua look and feel for macOS. Where prior implementations of these looks and feels may have been considered lacking, Swing in Java SE 6 addresses this problem by using more native GUI widget drawing routines of the underlying platforms.
+Generics
+Main article: Generics in Java
+
+In 2004, generics were added to the Java language, as part of J2SE 5.0. Prior to the introduction of generics, each variable declaration had to be of a specific type. For container classes, for example, this is a problem because there is no easy way to create a container that accepts only specific types of objects. Either the container operates on all subtypes of a class or interface, usually Object, or a different container class has to be created for each contained class. Generics allow compile-time type checking without having to create many container classes, each containing almost identical code. In addition to enabling more efficient code, certain runtime exceptions are prevented from occurring, by issuing compile-time errors. If Java prevented all runtime type errors (ClassCastException's) from occurring, it would be type safe.
+
+In 2016, the type system was shown not to be safe at all, it was proven unsound.[61]
+
+
